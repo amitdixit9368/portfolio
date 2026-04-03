@@ -76,6 +76,76 @@ const About = () => {
             ))}
           </motion.div>
         </div>
+
+        <motion.div
+          className="about-advanced"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          <h3>Career Snapshot</h3>
+          <div className="snapshot-grid">
+            {[
+              {
+                title: `${new Date().getFullYear() - 2021}+ Years`,
+                subtitle: 'Professional experience',
+              },
+              {
+                title: '90+ Projects',
+                subtitle: 'Delivered across industries',
+              },
+              {
+                title: '150+ Commits',
+                subtitle: 'Open-source progress',
+              },
+              {
+                title: '5+ Certifications',
+                subtitle: 'Modern dev credentials',
+              },
+            ].map((item, index) => (
+              <div key={index} className="snapshot-card">
+                <h4>{item.title}</h4>
+                <p>{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="skill-progress">
+            <h4>Modern Skill Impact</h4>
+            {[
+              { technology: 'React + TypeScript', level: 95 },
+              { technology: 'Node.js + Express', level: 90 },
+              { technology: 'GraphQL + REST API', level: 85 },
+              { technology: 'AWS / GCP / Azure', level: 80 },
+              { technology: 'CI/CD & DevOps', level: 82 },
+            ].map((skill, index) => (
+              <div key={index} className="progress-item">
+                <div className="progress-header">
+                  <span>{skill.technology}</span>
+                  <span>{skill.level}%</span>
+                </div>
+                <div className="progress-bar">
+                  <motion.div
+                    className="progress-filled"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.2, delay: index * 0.1 }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="timeline-context">
+            <h4>What I’m focusing on now</h4>
+            <ul>
+              <li>Building scalable micro-frontends for enterprise SaaS</li>
+              <li>Adopting cloud-native patterns with IaC (Terraform)</li>
+              <li>Improving app performance using Web Vitals and Lighthouse</li>
+              <li>Sharing knowledge: tech blogs and community workshops</li>
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
     </>

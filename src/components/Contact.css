@@ -86,11 +86,109 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.social-buttons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background: rgba(102, 126, 234, 0.18);
+  color: #3453a8;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.35);
+}
+
+.dark-theme .social-link {
+  background: rgba(102, 126, 234, 0.3);
+  color: #dce4ff;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.25);
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
 .contact-details {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
+.quick-templates {
+  margin-bottom: 1rem;
+}
+
+.quick-templates span {
+  font-weight: 700;
+  color: #3a3a3a;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.dark-theme .quick-templates span {
+  color: #f1f1f1;
+}
+
+.template-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.template-btn {
+  border: 1px solid rgba(102, 126, 234, 0.35);
+  background: rgba(255, 255, 255, 0.85);
+  color: #2a2a2a;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+
+.dark-theme .template-btn {
+  background: rgba(102, 126, 234, 0.1);
+  color: #f1f1f1;
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.template-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.18);
+}
+
+.template-btn.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
 
 .contact-item {
   display: flex;
