@@ -102,18 +102,32 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
   position: relative;
   z-index: 2;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0.6rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .heart-icon {
-  color: #e74c3c;
-  margin: 0 0.25rem;
+  color: #ff4757;
+  margin: 0 0.35rem;
+  animation: pulse 1.5s ease-in-out infinite;
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
 }
 
 /* Responsive */

@@ -124,37 +124,40 @@
 }
 
 .theme-toggle {
-  background: linear-gradient(135deg, #667eea15, #764ba215);
-  border: 2px solid transparent;
-  color: #667eea;
-  font-size: 1.3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.25rem;
   cursor: pointer;
-  transition: all 0.3s;
-  width: 45px;
-  height: 45px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
 .dark-theme .theme-toggle {
-  color: #ffd700;
-  background: rgba(255, 215, 0, 0.1);
-  border-color: rgba(255, 215, 0, 0.2);
+  color: #fff;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
 }
 
 .theme-toggle:hover {
-  background: linear-gradient(135deg, #667eea25, #764ba225);
-  border-color: #667eea;
-  transform: rotate(20deg) scale(1.1);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: rotate(20deg) scale(1.15);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
 }
 
 .dark-theme .theme-toggle:hover {
-  background: rgba(255, 215, 0, 0.2);
-  border-color: #ffd700;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
 }
 
 .navbar-toggle {

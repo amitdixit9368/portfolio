@@ -54,8 +54,8 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
-        <p>Made with <FaHeart className="heart-icon" /> by [Your Name]</p>
+        <p>&copy; {currentYear} Amit Dixit. All rights reserved.</p>
+        <p>Made with <FaHeart className="heart-icon" /> by Amit Dixit</p>
       </div>
     </footer>
   );
