@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaRocket, FaUsers } from 'react-icons/fa';
+import { SEOHead } from '../utils/SEO';
 import './About.css';
 
 const About = () => {
@@ -11,13 +12,21 @@ const About = () => {
   ];
 
   return (
-    <motion.section
-      className="about"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      data-aos="fade-up"
-    >
+    <>
+      <SEOHead 
+        title="About Me - Amit Dixit | Full Stack Developer"
+        description="Learn about Amit Dixit, a passionate Full Stack Developer with 3+ years of experience. I specialize in React, Node.js, and building scalable web applications."
+        keywords="about, developer, experience, skills, full stack"
+        ogImage="https://amitdixit9368.github.io/portfolio/og-about.jpg"
+        url="https://amitdixit9368.github.io/portfolio/about"
+      />
+      <motion.section
+        className="about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        data-aos="fade-up"
+      >
       <div className="about-content">
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
@@ -69,6 +78,7 @@ const About = () => {
         </div>
       </div>
     </motion.section>
+    </>
   );
 };
 

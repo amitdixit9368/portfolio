@@ -1,12 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { ThemeContext } from '../ThemeContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((open) => !open);
+  const closeMenu = () => setMenuOpen(false);
+
+  const menuItems = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/skills', label: 'Skills' },
+    { to: '/testimonials', label: 'Testimonials' },
+    { to: '/contact', label: 'Contact' }
+  ];
 
   return (
     <motion.nav
@@ -16,16 +29,20 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
           Portfolio
         </Link>
-        <div className="navbar-right">
+        <div className="navbar-toggle" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        <div className={`navbar-right ${menuOpen ? 'open' : ''}`}>
           <ul className="navbar-menu">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            {menuItems.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to} onClick={closeMenu}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
           <button className="theme-toggle" onClick={toggleTheme}>
             {isDark ? <FaSun /> : <FaMoon />}

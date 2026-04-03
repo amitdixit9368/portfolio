@@ -2,16 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaDownload, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { SEOHead } from '../utils/SEO';
 import './Home.css';
 
 const Home = () => {
   return (
-    <motion.section
-      className="home"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <>
+      <SEOHead 
+        title="Amit Dixit - Full Stack Developer & React Specialist | Portfolio"
+        description="Welcome to my portfolio. I'm a Full Stack Developer specializing in React with expertise in modern web technologies and clean code practices."
+        keywords="developer, react, full stack, web development, portfolio"
+        ogImage="https://amitdixit9368.github.io/portfolio/og-image.jpg"
+        url="https://amitdixit9368.github.io/portfolio/"
+      />
+      <motion.section
+        className="home"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
       <div className="home-content">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -86,6 +95,7 @@ const Home = () => {
         </motion.div>
       </div>
     </motion.section>
+    </>
   );
 };
 

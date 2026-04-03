@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with real-time inventory, payment integration, and admin analytics.",
+    "image": "https://via.placeholder.com/400x250/667eea/ffffff?text=E-Commerce",
+    "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+    "category": "fullstack",
+    "github": "https://github.com/your-username/ecommerce",
+    "demo": "https://ecommerce-demo.com",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "description": "Collaborative task management with real-time updates, drag-and-drop, and team notifications.",
+    "image": "https://via.placeholder.com/400x250/764ba2/ffffff?text=Task+Manager",
+    "tech": ["React", "Firebase", "Material-UI"],
+    "category": "frontend",
+    "github": "https://github.com/your-username/taskapp",
+    "demo": "https://taskapp-demo.com",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Weather Dashboard",
+    "description": "Responsive weather app with location-based forecasts, interactive maps, and analytics.",
+    "image": "https://via.placeholder.com/400x250/667eea/ffffff?text=Weather+App",
+    "tech": ["React", "OpenWeather API", "Chart.js"],
+    "category": "frontend",
+    "github": "https://github.com/your-username/weather",
+    "demo": "https://weather-demo.com",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "API Gateway Service",
+    "description": "Scalable API gateway with rate limiting, authentication, and comprehensive logging.",
+    "image": "https://via.placeholder.com/400x250/764ba2/ffffff?text=API+Gateway",
+    "tech": ["Node.js", "Express", "Redis", "JWT"],
+    "category": "backend",
+    "github": "https://github.com/your-username/gateway",
+    "demo": "https://api-gateway-demo.com",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Portfolio Website",
+    "description": "Modern portfolio with dark mode, smooth animations, and advanced interactions.",
+    "image": "https://via.placeholder.com/400x250/667eea/ffffff?text=Portfolio",
+    "tech": ["React", "Framer Motion", "CSS3"],
+    "category": "frontend",
+    "github": "https://github.com/your-username/portfolio",
+    "demo": "https://your-portfolio.com",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Chat Application",
+    "description": "Real-time chat with WebSocket integration, file sharing, and group chat functionality.",
+    "image": "https://via.placeholder.com/400x250/764ba2/ffffff?text=Chat+App",
+    "tech": ["React", "Socket.io", "Node.js", "MongoDB"],
+    "category": "fullstack",
+    "github": "https://github.com/your-username/chat",
+    "demo": "https://chat-demo.com",
+    "featured": false
+  }
+]

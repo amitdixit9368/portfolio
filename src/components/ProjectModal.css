@@ -1,0 +1,85 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2001;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content {
+  width: min(92vw, 820px);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  position: relative;
+  z-index: 2002;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-content h3 {
+  margin: 0 0 0.9rem;
+  color: #333;
+}
+
+.modal-content p {
+  color: #505050;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.modal-tech-list {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.modal-tech-item {
+  font-size: 0.8rem;
+  color: #fff;
+  background: #667eea;
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+}
+
+.modal-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.modal-links a {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background: #667eea;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.modal-links a:hover {
+  background: #5563d6;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

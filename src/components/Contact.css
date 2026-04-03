@@ -156,14 +156,57 @@
   gap: 0.5rem;
 }
 
-.submit-btn:hover:not(.submitting) {
+.submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
 }
 
-.submit-btn.submitting {
+.submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+.submit-message {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.submit-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.dark-theme .submit-message.success {
+  background: #155724;
+  color: #d4edda;
+  border: 1px solid #1e6f36;
+}
+
+.submit-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.dark-theme .submit-message.error {
+  background: #721c24;
+  color: #f8d7da;
+  border: 1px solid #a94442;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .spinner {
