@@ -28,16 +28,18 @@ const Home = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="hero-text"
         >
-          <h1>Hi, I'm <span className="highlight">[Your Name]</span></h1>
+          <h1>Hi, I'm <span className="highlight">Amit Dixit</span></h1>
           <TypeAnimation
             sequence={[
               'Full Stack Developer',
               2000,
               'React Specialist',
               2000,
-              'UI/UX Enthusiast',
+              'Web Developer',
               2000,
               'Problem Solver',
+              2000,
+              'Tech Enthusiast',
               2000,
             ]}
             wrapper="h2"
@@ -47,7 +49,7 @@ const Home = () => {
           />
           <p>
             I create amazing web experiences with modern technologies.
-            Passionate about clean code and user-centric design.
+            Passionate about clean code, user-centric design, and building scalable solutions.
           </p>
         </motion.div>
         
