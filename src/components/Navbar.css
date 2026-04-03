@@ -7,6 +7,12 @@
   backdrop-filter: blur(10px);
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.dark-theme .navbar {
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
@@ -23,6 +29,17 @@
   font-weight: bold;
   color: #333;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.dark-theme .navbar-logo {
+  color: #fff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navbar-menu {
@@ -38,7 +55,28 @@
   transition: color 0.3s;
 }
 
+.dark-theme .navbar-menu a {
+  color: #fff;
+}
+
 .navbar-menu a:hover {
+  color: #007bff;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dark-theme .theme-toggle {
+  color: #fff;
+}
+
+.theme-toggle:hover {
   color: #007bff;
 }
 
@@ -46,5 +84,9 @@
 @media (max-width: 768px) {
   .navbar-menu {
     display: none;
+  }
+  
+  .navbar-right {
+    gap: 1rem;
   }
 }

@@ -5,8 +5,13 @@
   min-height: 100vh;
 }
 
+.dark-theme .skills {
+  background: #1a1a1a;
+  color: #fff;
+}
+
 .skills-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -17,53 +22,125 @@
   color: #333;
 }
 
-.skills-grid {
+.dark-theme .skills h2 {
+  color: #fff;
+}
+
+.skills-categories {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.category-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.dark-theme .category-section h3 {
+  color: #fff;
+}
+
+.category-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .skill-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.dark-theme .skill-item {
+  background: #2a2a2a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  width: 50px;
+  text-align: center;
+}
+
+.skill-info {
+  flex: 1;
 }
 
 .skill-name {
-  width: 120px;
-  font-weight: 500;
+  font-weight: 600;
   color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.dark-theme .skill-name {
+  color: #fff;
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.dark-theme .skill-percentage {
+  color: #ccc;
 }
 
 .skill-bar {
-  flex: 1;
-  height: 10px;
+  height: 8px;
   background: #e9ecef;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
+}
+
+.dark-theme .skill-bar {
+  background: #444;
 }
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 5px;
-}
-
-.skill-percentage {
-  width: 50px;
-  text-align: right;
-  font-weight: bold;
-  color: #333;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .skill-item {
-    flex-direction: column;
-    align-items: flex-start;
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .skill-name {
+  .skills h2 {
+    font-size: 2rem;
+  }
+  
+  .category-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .skill-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .skill-icon {
     width: auto;
-    margin-bottom: 0.5rem;
   }
 }
