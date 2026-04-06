@@ -1,15 +1,21 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-import { ThemeProvider } from './ThemeContext.jsx'
+import App from './App'
+import { ThemeProvider } from './ThemeContext'
 import { HelmetProvider } from 'react-helmet-async'
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
-AOS.init();
+AOS.init()
 
-createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root')
+
+if (!rootElement) {
+  throw new Error('Root element not found')
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <HelmetProvider>
       <ThemeProvider>

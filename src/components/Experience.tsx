@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { FaBriefcase } from 'react-icons/fa';
 import { SEOHead } from '../utils/SEO';
 import './Experience.css';
@@ -32,7 +32,7 @@ const Experience = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -43,12 +43,12 @@ const Experience = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { x: -50, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: 'easeOut' as const },
     },
   };
 

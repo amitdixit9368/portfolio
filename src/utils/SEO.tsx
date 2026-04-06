@@ -1,6 +1,18 @@
 import { Helmet } from 'react-helmet-async';
 
-export const SEOHead = ({ title, description, keywords, ogImage, url }) => {
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords: string;
+  ogImage: string;
+  url: string;
+}
+
+interface StructuredDataProps {
+  data: Record<string, unknown> | Record<string, unknown>[];
+}
+
+export const SEOHead = ({ title, description, keywords, ogImage, url }: SEOHeadProps) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -19,7 +31,7 @@ export const SEOHead = ({ title, description, keywords, ogImage, url }) => {
   );
 };
 
-export const StructuredData = ({ data }) => {
+export const StructuredData = ({ data }: StructuredDataProps) => {
   return (
     <Helmet>
       <script type="application/ld+json">
