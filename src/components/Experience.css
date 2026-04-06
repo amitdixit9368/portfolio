@@ -1,6 +1,6 @@
 /* Experience.css */
 .experience {
-  padding: 5rem 2rem;
+  padding: 8.5rem 2rem 5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   color: white;
@@ -216,7 +216,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .experience {
-    padding: 3rem 1.5rem;
+    padding: 7rem 1.5rem 3rem;
   }
 
   .experience .section-header h2 {
