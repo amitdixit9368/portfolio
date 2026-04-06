@@ -1,12 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
-import { ThemeContext } from '../ThemeContext';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { isDark, toggleTheme } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((open) => !open);
@@ -32,13 +31,13 @@ const Navbar = () => {
     >
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-text">𝔸𝕸𝕴𝕿</span>
+          <img src={logo} alt="Amit Dixit Logo" className="logo-image" />
         </Link>
-        <div className="navbar-toggle" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
 
         <div className={`navbar-right ${menuOpen ? 'open' : ''}`}>
+          <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
           <ul className="navbar-menu">
             {menuItems.map((item) => (
               <li key={item.to}>
@@ -52,9 +51,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="theme-toggle" onClick={toggleTheme} title="Toggle dark mode">
-            {isDark ? <FaSun /> : <FaMoon />}
-          </button>
         </div>
       </div>
     </motion.nav>

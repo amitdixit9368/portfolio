@@ -4,6 +4,8 @@
   --primary-color: #667eea;
   --secondary-color: #764ba2;
   --accent-color: #ffd700;
+  --site-width: 1200px;
+  --site-gutter: 2rem;
   --text-dark: #333333;
   --text-light: #666666;
   --bg-light: #f5f7fa;
@@ -189,9 +191,9 @@ footer {
 
 /* Utility Classes */
 .container {
-  max-width: 1200px;
+  max-width: var(--site-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--site-gutter);
 }
 
 .gradient-text {
@@ -243,13 +245,14 @@ footer {
 
 /* Selection */
 ::selection {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: rgba(102, 126, 234, 0.35);
+  color: #111827;
+  -webkit-text-fill-color: #111827;
 }
 
 ::-moz-selection {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: rgba(102, 126, 234, 0.35);
+  color: #111827;
 }
 
 /* Focus States */

@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaDownload, FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaDownload, FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaArrowDown } from 'react-icons/fa';
+import { FaThreads } from 'react-icons/fa6';
 import { SEOHead } from '../utils/SEO';
+import profileImage from '../assets/profile.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -46,6 +49,7 @@ const Home = () => {
           <div className="orb orb-2"></div>
           <div className="orb orb-3"></div>
         </div>
+        <div className="home-inner">
 
         <motion.div
           className="home-content"
@@ -57,9 +61,9 @@ const Home = () => {
             variants={itemVariants}
             className="hero-text"
           >
-            <motion.div className="greeting-badge">
+            {/* <motion.div className="greeting-badge">
               <span>👋 Welcome to my portfolio</span>
-            </motion.div>
+            </motion.div> */}
             
             <h1>
               <motion.span
@@ -82,13 +86,13 @@ const Home = () => {
             <div className="typing-wrapper">
               <TypeAnimation
                 sequence={[
-                  'Full Stack Developer',
+                  'Web Developer',
                   1500,
-                  'React Specialist',
+                  'Wordpress Specialist',
                   1500,
-                  'Web Innovator',
+                  'React obssessed',
                   1500,
-                  'Problem Solver',
+                  'Problem Solver, Decision Maker',
                   1500,
                   'Tech Enthusiast',
                   1500,
@@ -106,7 +110,7 @@ const Home = () => {
               className="hero-description"
             >
               Crafting extraordinary web experiences with cutting-edge technologies. 
-              I specialize in React, Node.js, and modern web architecture. 
+              I specialize in Html, Css, Javascript, React, Php, APIs, Wordpress and modern web architecture. 
               <span className="gradient-text"> Let's build something amazing together.</span>
             </motion.p>
           </motion.div>
@@ -115,18 +119,19 @@ const Home = () => {
             variants={itemVariants}
             className="hero-actions"
           >
-            <motion.a
-              href="#contact"
+            <motion.div
               className="cta-button primary"
               whileHover={{ scale: 1.05, boxShadow: '0 25px 50px rgba(102, 126, 234, 0.4)' }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Get In Touch</span>
-              <div className="button-glow"></div>
-            </motion.a>
+              <Link to="/contact">
+                <span>Get In Touch</span>
+                <div className="button-glow"></div>
+              </Link>
+            </motion.div>
             
             <motion.a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               className="cta-button secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -141,9 +146,11 @@ const Home = () => {
             className="social-links"
           >
             {[
-              { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
-              { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
+              { icon: FaGithub, url: 'https://github.com/amitdixit9368', label: 'GitHub' },
+              { icon: FaLinkedin, url: 'https://linkedin.com/in/amit-kumar-dixit-2a648b2b0', label: 'LinkedIn' },
+              { icon: FaThreads, url: 'https://www.threads.net/@amit_dixit_22', label: 'Threads' },
+              { icon: FaInstagram, url: 'https://instagram.com/amit_dixit_22', label: 'Instagram' },
+              { icon: FaWhatsapp, url: 'https://wa.me/919528368232', label: 'WhatsApp' },
             ].map((social, index) => (
               <motion.a
                 key={index}
@@ -160,14 +167,14 @@ const Home = () => {
             ))}
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className="scroll-indicator"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <p>Scroll to explore</p>
             <FaArrowDown />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
         
         <div className="hero-image">
@@ -178,9 +185,15 @@ const Home = () => {
             className="profile-placeholder"
           >
             <div className="profile-circle">
+              <img 
+                src={profileImage}
+                alt="Amit Dixit Profile" 
+                className="profile-image"
+              />
               <div className="glow-ring"></div>
             </div>
           </motion.div>
+        </div>
         </div>
       </motion.section>
     </>

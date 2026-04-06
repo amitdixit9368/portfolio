@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEOHead } from '../utils/SEO';
 import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
-import { FaLinkedin, FaGithub, FaTwitter, FaFileDownload } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaFileDownload } from 'react-icons/fa';
 import './Contact.css';
+import { FaThreads } from 'react-icons/fa6';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,15 +32,18 @@ const Contact = () => {
   ];
 
   const contactDetails = [
-    { icon: <FiMail />, title: 'Email', value: 'amitdixit@example.com', href: 'mailto:amitdixit@example.com' },
-    { icon: <FiPhone />, title: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
-    { icon: <FiMapPin />, title: 'Location', value: 'Bhopal, India', href: 'https://goo.gl/maps/RzXW3Tz7Jxv' }
+    { icon: <FiMail />, title: 'Email', value: 'amitdixit9368@gmail.com', href: 'mailto:amitdixit9368@gmail.com' },
+    { icon: <FiPhone />, title: 'Phone', value: '+91 95283 68232', href: 'tel:+919528368232' },
+    { icon: <FaWhatsapp />, title: 'WhatsApp', value: '+91 95283 68232', href: 'https://wa.me/919528368232' },
+    { icon: <FiMapPin />, title: 'Location', value: 'Noida Sector 28, Uttar Pradesh, India', href: 'https://goo.gl/maps/RzXW3Tz7Jxv' }
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin />, name: 'LinkedIn', href: 'https://www.linkedin.com/in/amitdixit/' },
+    { icon: <FaLinkedin />, name: 'LinkedIn', href: 'https://www.linkedin.com/in/amit-kumar-dixit-2a648b2b0' },
     { icon: <FaGithub />, name: 'GitHub', href: 'https://github.com/amitdixit9368' },
-    { icon: <FaTwitter />, name: 'Twitter', href: 'https://twitter.com/amitdixit' }
+    { icon: <FaThreads />, name: 'Threads', href: 'https://www.threads.net/@amit_dixit_22' },
+    { icon: <FaInstagram />, name: 'Instagram', href: 'https://instagram.com/amit_dixit_22' },
+    { icon: <FaWhatsapp />, name: 'WhatsApp', href: 'https://wa.me/919528368232' }
   ];
 
 
@@ -59,7 +63,7 @@ const Contact = () => {
     
     try {
       // Using Formspree service
-      const response = await fetch('https://formspree.io/f/xyzadmin', {
+      const response = await fetch('https://formspree.io/f/xzdkyvwy', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +111,7 @@ const Contact = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Get In Touch
+          Get In Touch With
         </motion.h2>
         <div className="contact-grid">
           <motion.div
@@ -127,14 +131,6 @@ const Contact = () => {
                     <h4>{item.title}</h4>
                     <p>{item.value}</p>
                   </div>
-                </a>
-              ))}
-            </div>
-
-            <div className="social-buttons">
-              {socialLinks.map((item, idx) => (
-                <a key={idx} className="social-link" href={item.href} target="_blank" rel="noreferrer" aria-label={item.name}>
-                  {item.icon}
                 </a>
               ))}
             </div>
@@ -217,6 +213,22 @@ const Contact = () => {
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+
+            <div className="form-socials" aria-label="Social media links">
+              {socialLinks.map((item, idx) => (
+                <a
+                  key={idx}
+                  className="form-social-link"
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.name}
+                  title={item.name}
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
           </motion.form>
         </div>
       </div>

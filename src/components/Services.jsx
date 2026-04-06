@@ -10,15 +10,15 @@ const Services = () => {
       id: 1,
       icon: <FaCode />,
       title: 'Web Development',
-      description: 'Build responsive, scalable web applications using modern technologies like React, Node.js, and databases.',
+      description: 'Build responsive, scalable web applications using modern technologies like Html, Css, Javascript, Php, React, Node.js, databases, Wordpress.',
       features: ['SPA Development', 'API Integration', 'Performance Optimization']
     },
     {
       id: 2,
       icon: <FaMobile />,
-      title: 'Mobile Development',
-      description: 'Create mobile-first designs and responsive applications that work seamlessly across all devices.',
-      features: ['Responsive Design', 'Cross-browser Testing', 'Mobile Optimization']
+      title: 'Wordpress Development',
+      description: 'My WordPress development services include everything from design and development to content and customization per client needs',
+      features: ['Plugin Development', 'Theme Customization', 'Performance Optimization']
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Services = () => {
       id: 4,
       icon: <FaServer />,
       title: 'Backend Development',
-      description: 'Build robust server-side solutions with Node.js, Express, and cloud platforms.',
+      description: 'Build robust server-side solutions with Php,Node.js, Express, and cloud platforms.',
       features: ['RESTful APIs', 'Authentication', 'Server Management']
     },
     {

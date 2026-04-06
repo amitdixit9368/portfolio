@@ -4,17 +4,17 @@ import './Testimonials.css';
 
 const testimonials = [
   {
-    name: 'Sophia A.',
-    role: 'Product Owner',
+    name: 'Virendra Singh',
+    role: 'Founder & CEO',
     text: 'A remarkable developer. Delivered all features with excellent communication and quality.'
   },
   {
-    name: 'David K.',
-    role: 'Backend Architect',
+    name: 'Dileep Kumar Tekwani',
+    role: 'CTO',
     text: 'The architecture is scalable and maintainable. Clean component organization and great performance.'
   },
   {
-    name: 'Priya S.',
+    name: 'Vishal Sharma',
     role: 'UI/UX Specialist',
     text: 'UI interactions are smooth, responsive and modern. The portfolio stands out with subtle micro-animations.'
   }
