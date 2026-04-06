@@ -6,16 +6,16 @@ import './About.css';
 
 const About = () => {
   const stats = [
-    { icon: <FaCode />, number: '50+', label: 'Projects Completed' },
-    { icon: <FaRocket />, number: '3+', label: 'Years Experience' },
-    { icon: <FaUsers />, number: '100+', label: 'Happy Clients' }
+    { icon: <FaCode />, number: '4+', label: 'Projects Completed' },
+    { icon: <FaRocket />, number: '1.5+', label: 'Years Experience' },
+    { icon: <FaUsers />, number: '5+', label: 'Happy Clients' }
   ];
 
   return (
     <>
       <SEOHead 
         title="About Me - Amit Dixit | Full Stack Developer"
-        description="Learn about Amit Dixit, a passionate Full Stack Developer with 3+ years of experience. I specialize in React, Node.js, and building scalable web applications."
+        description="Learn about Amit Dixit, a passionate Full Stack Developer with 1.5+ years of experience. I specialize in React, Node.js, and building scalable web applications."
         keywords="about, developer, experience, skills, full stack"
         ogImage="https://amitdixit9368.github.io/portfolio/og-about.jpg"
         url="https://amitdixit9368.github.io/portfolio/about"
@@ -46,7 +46,7 @@ const About = () => {
             data-aos="fade-right"
           >
             <p>
-              I'm a passionate full-stack developer with over 3 years of experience creating
+              I'm a passionate full-stack developer with over 1.5+ years of experience creating
               digital solutions that make a difference. My journey in tech started with curiosity
               and has evolved into a career dedicated to crafting exceptional user experiences.
             </p>
@@ -87,15 +87,15 @@ const About = () => {
           <div className="snapshot-grid">
             {[
               {
-                title: `${new Date().getFullYear() - 2021}+ Years`,
+                title: `${new Date().getFullYear() - 2025}+ Years`,
                 subtitle: 'Professional experience',
               },
               {
-                title: '90+ Projects',
+                title: '5+ Projects',
                 subtitle: 'Delivered across industries',
               },
               {
-                title: '150+ Commits',
+                title: '5+ Commits',
                 subtitle: 'Open-source progress',
               },
               {

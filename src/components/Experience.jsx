@@ -8,35 +8,27 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      date: '2023 - Present',
-      role: 'Senior Full Stack Developer',
-      company: 'Tech Innovations Inc.',
-      description: 'Lead development of scalable web applications, manage team of 3 developers, implement best practices and architecture.',
-      highlights: ['Team Leadership', 'Architecture Design', 'Code Review', 'DevOps']
+      date: '2025 - Present', 
+      role: 'Web Developer & Wordpress Developer',
+      company: 'Exiliensoft Consultiong Pvt. Ltd.',
+      description: 'Developed and maintained 10+ production applications, improved performance by 40%, mentored junior developers.',
+      highlights: ['React Development', 'Wordpress Development','Plugin Development', 'Performance Optimization', 'Mentoring']
     },
     {
       id: 2,
-      date: '2021 - 2023',
-      role: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      description: 'Developed and maintained 10+ production applications, improved performance by 40%, mentored junior developers.',
-      highlights: ['React Development', 'Node.js Backend', 'Performance Optimization', 'Mentoring']
+      date: '2025 (April - July)',
+      role: 'Wordpress Developer',
+      company: 'Goa Tek Inc.',
+      description: 'Created responsive UI components, implemented state management solutions, Custom plugin development, worked with design teams.',
+      highlights: ['HTML', 'CSS', 'PHP', 'JavaScript', 'WordPress', 'UI/UX Collaboration']
     },
     {
       id: 3,
-      date: '2020 - 2021',
-      role: 'Frontend Developer',
-      company: 'Web Studios Co.',
-      description: 'Created responsive UI components, implemented state management solutions, worked with design teams.',
-      highlights: ['React', 'Redux', 'CSS3', 'UI Design']
-    },
-    {
-      id: 4,
-      date: '2019 - 2020',
-      role: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      description: 'Started web development journey, worked on HTML/CSS/JavaScript projects, learned modern stack.',
-      highlights: ['HTML5', 'CSS3', 'JavaScript', 'Git Basics']
+      date: '2022 - 2025',
+      role: 'College Intern',
+      company: 'RATM College',
+      description: 'Started Learning web development journey, worked on HTML/CSS/JavaScript projects, learned modern stack.',
+      highlights: ['HTML5', 'CSS3', 'JavaScript','PHP', 'C', 'C++', 'Git Basics', 'Project Collaboration', 'Problem Solving']
     }
   ];
 

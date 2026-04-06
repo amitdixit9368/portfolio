@@ -1,5 +1,5 @@
 .testimonials {
-  padding: 5rem 2rem;
+  padding: 8.5rem 2rem 5rem;
   background: #f1f5ff;
   min-height: 80vh;
 }
@@ -65,4 +65,10 @@
 
 .dark-theme .testimonial-item span {
   color: #a6adbf;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 7rem 1.5rem 3rem;
+  }
 }
