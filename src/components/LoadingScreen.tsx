@@ -1,8 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import './LoadingScreen.css';
 
-const LoadingScreen = ({ isLoading }) => {
+interface LoadingScreenProps {
+  isLoading?: boolean;
+}
+
+const LoadingScreen = ({ isLoading = true }: LoadingScreenProps) => {
   if (!isLoading) return null;
 
   return (

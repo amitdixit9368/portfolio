@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import ProjectModal from './ProjectModal';
 import projectsData from '../data/projects.json';
 import { SEOHead } from '../utils/SEO';
+import type { Project } from '../types';
 import './Projects.css';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories = [
     { id: 'all', label: 'All Projects' },
@@ -17,9 +18,11 @@ const Projects = () => {
     { id: 'fullstack', label: 'Full Stack' }
   ];
 
+  const typedProjects = projectsData as Project[];
+
   const filteredProjects = filter === 'all' 
-    ? projectsData
-    : projectsData.filter(project => project.category === filter);
+    ? typedProjects
+    : typedProjects.filter((project) => project.category === filter);
 
   return (
     <>

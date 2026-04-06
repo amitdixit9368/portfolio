@@ -1,49 +1,58 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './AnimatedBackground.css';
 
+interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  opacity: number;
+}
+
+const createParticle = (width: number, height: number): Particle => ({
+  x: Math.random() * width,
+  y: Math.random() * height,
+  size: Math.random() * 2 + 0.5,
+  speedX: Math.random() * 0.5 - 0.25,
+  speedY: Math.random() * 0.5 - 0.25,
+  opacity: Math.random() * 0.5 + 0.2,
+});
+
+const updateParticle = (particle: Particle, width: number, height: number) => {
+  particle.x += particle.speedX;
+  particle.y += particle.speedY;
+
+  if (particle.x > width) particle.x = 0;
+  if (particle.x < 0) particle.x = width;
+  if (particle.y > height) particle.y = 0;
+  if (particle.y < 0) particle.y = height;
+};
+
+const drawParticle = (ctx: CanvasRenderingContext2D, particle: Particle) => {
+  ctx.fillStyle = `rgba(102, 126, 234, ${particle.opacity})`;
+  ctx.beginPath();
+  ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+  ctx.fill();
+};
+
 const AnimatedBackground = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const particles = [];
+    const particles: Particle[] = [];
     const particleCount = 50;
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-        this.opacity = Math.random() * 0.5 + 0.2;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
-      }
-
-      draw() {
-        ctx.fillStyle = `rgba(102, 126, 234, ${this.opacity})`;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(createParticle(canvas.width, canvas.height));
     }
 
     const animate = () => {
@@ -51,8 +60,8 @@ const AnimatedBackground = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
+        updateParticle(particles[i], canvas.width, canvas.height);
+        drawParticle(ctx, particles[i]);
 
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;

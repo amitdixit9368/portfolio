@@ -1,13 +1,19 @@
-import React from 'react';
 import { FaTimes } from 'react-icons/fa';
+import type { MouseEvent } from 'react';
+import type { Project } from '../types';
 import './ProjectModal.css';
 
-const ProjectModal = ({ project, onClose }) => {
+interface ProjectModalProps {
+  project: Project | null;
+  onClose: () => void;
+}
+
+const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   if (!project) return null;
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Close">
           <FaTimes />
         </button>
