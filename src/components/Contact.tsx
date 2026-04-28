@@ -111,7 +111,7 @@ const Contact = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Get In Touch With
+          Get In Touch With Me
         </motion.h2>
         <div className="contact-grid">
           <motion.div

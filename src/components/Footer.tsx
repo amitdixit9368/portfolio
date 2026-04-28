@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>Portfolio</h3>
+          <h3>Amit Dixit</h3>
           <p>Building responsive websites, WordPress solutions, and practical frontend experiences.</p>
           <div className="social-links">
             <a href="https://github.com/amitdixit9368" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

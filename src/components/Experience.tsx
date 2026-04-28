@@ -8,7 +8,7 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      date: 'June 2025 - Present',
+      date: 'June 2024 - Present',
       role: 'Web Developer ',
       company: 'Exiliensoft Consulting Pvt. Ltd.',
       description: 'Building and maintaining responsive websites, WordPress features, custom plugin work, and React interfaces for production projects.',
