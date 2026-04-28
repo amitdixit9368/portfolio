@@ -12,7 +12,7 @@ const Home = () => {
   const proofPoints = [
     { icon: <FaBriefcase />, value: '1.5+ Years', label: 'Professional experience' },
     { icon: <FaCode />, value: '10+ Builds', label: 'Websites, plugins and apps' },
-    { icon: <FaCheckCircle />, value: 'Open', label: 'Web Developer roles' },
+    { icon: <FaCheckCircle />, value: 'Available', label: 'For Web Developer roles' },
   ];
 
   const containerVariants: Variants = {
@@ -67,9 +67,16 @@ const Home = () => {
             variants={itemVariants}
             className="hero-text"
           >
-            {/* <motion.div className="greeting-badge">
-              <span>👋 Welcome to my portfolio</span>
-            </motion.div> */}
+            {/* Available for Work badge — important signal for recruiters */}
+            <motion.div
+              className="greeting-badge"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+            >
+              <span className="available-dot"></span>
+              <span>Available for Work · Open to Roles</span>
+            </motion.div>
             
             <h1>
               <motion.span
@@ -197,14 +204,6 @@ const Home = () => {
             ))}
           </motion.div>
 
-          {/* <motion.div
-            className="scroll-indicator"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <p>Scroll to explore</p>
-            <FaArrowDown />
-          </motion.div> */}
         </motion.div>
         
         <div className="hero-image">
@@ -217,7 +216,7 @@ const Home = () => {
             <div className="profile-circle">
               <img 
                 src={`${import.meta.env.BASE_URL}profile.jpg`}
-                alt="Amit Dixit Profile" 
+                alt="Amit Dixit - Web Developer" 
                 className="profile-image"
               />
               <div className="glow-ring"></div>
