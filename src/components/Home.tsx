@@ -2,13 +2,19 @@ import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
-import { FaDownload, FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaArrowDown } from 'react-icons/fa';
-import { FaThreads } from 'react-icons/fa6';
+import { FaBriefcase, FaCheckCircle, FaCode, FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { SEOHead } from '../utils/SEO';
-import profileImage from '../assets/profile.jpg';
 import './Home.css';
 
 const Home = () => {
+  const roleBadges = ['React', 'WordPress', 'PHP', 'REST APIs', 'Responsive UI'];
+
+  const proofPoints = [
+    { icon: <FaBriefcase />, value: '1.5+ Years', label: 'Professional experience' },
+    { icon: <FaCode />, value: '10+ Builds', label: 'Websites, plugins and apps' },
+    { icon: <FaCheckCircle />, value: 'Open', label: 'Web Developer roles' },
+  ];
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,9 +38,9 @@ const Home = () => {
   return (
     <>
       <SEOHead 
-        title="Amit Dixit - Full Stack Developer & React Specialist | Portfolio"
-        description="Welcome to my portfolio. I'm a Full Stack Developer specializing in React with expertise in modern web technologies and clean code practices."
-        keywords="developer, react, full stack, web development, portfolio"
+        title="Amit Dixit - Web Developer | React, WordPress & PHP"
+        description="Amit Dixit is a web developer focused on responsive React interfaces, WordPress development, PHP, API integrations, and maintainable business websites."
+        keywords="web developer, react developer, wordpress developer, php developer, portfolio"
         ogImage="https://amitdixit9368.github.io/portfolio/og-image.jpg"
         url="https://amitdixit9368.github.io/portfolio/"
       />
@@ -86,15 +92,15 @@ const Home = () => {
             <div className="typing-wrapper">
               <TypeAnimation
                 sequence={[
-                  'Web Developer',
+                  'Frontend Developer',
                   1500,
-                  'Wordpress Specialist',
+                  'WordPress Developer',
                   1500,
-                  'React obssessed',
+                  'React Developer',
                   1500,
-                  'Problem Solver, Decision Maker',
+                  'PHP Developer',
                   1500,
-                  'Tech Enthusiast',
+                  'API Integration Specialist',
                   1500,
                 ]}
                 wrapper="h2"
@@ -105,13 +111,23 @@ const Home = () => {
               />
             </div>
 
+            <motion.div
+              variants={itemVariants}
+              className="hero-badges"
+              aria-label="Core development skills"
+            >
+              {roleBadges.map((badge) => (
+                <span key={badge} className="role-badge">{badge}</span>
+              ))}
+            </motion.div>
+
             <motion.p
               variants={itemVariants}
               className="hero-description"
             >
-              Crafting extraordinary web experiences with cutting-edge technologies. 
-              I specialize in Html, Css, Javascript, React, Php, APIs, Wordpress and modern web architecture. 
-              <span className="gradient-text"> Let's build something amazing together.</span>
+              I build responsive websites and business web apps with clean UI, reliable functionality, and practical performance in mind.
+              My stack includes HTML, CSS, JavaScript, React, PHP, WordPress, and API integrations.
+              <span className="gradient-text"> I am ready to contribute to web developer roles and client projects.</span>
             </motion.p>
           </motion.div>
           
@@ -135,7 +151,7 @@ const Home = () => {
               className="cta-button secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              download
+              download="Amit-Dixit-Web-development.pdf"
             >
               <FaDownload /> Download CV
             </motion.a>
@@ -148,8 +164,7 @@ const Home = () => {
             {[
               { icon: FaGithub, url: 'https://github.com/amitdixit9368', label: 'GitHub' },
               { icon: FaLinkedin, url: 'https://linkedin.com/in/amit-kumar-dixit-2a648b2b0', label: 'LinkedIn' },
-              { icon: FaThreads, url: 'https://www.threads.net/@amit_dixit_22', label: 'Threads' },
-              { icon: FaInstagram, url: 'https://instagram.com/amit_dixit_22', label: 'Instagram' },
+              { icon: FaEnvelope, url: 'mailto:amitdixit9368@gmail.com', label: 'Email' },
               { icon: FaWhatsapp, url: 'https://wa.me/919528368232', label: 'WhatsApp' },
             ].map((social, index) => (
               <motion.a
@@ -164,6 +179,21 @@ const Home = () => {
               >
                 <social.icon />
               </motion.a>
+            ))}
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="hero-proof-list"
+          >
+            {proofPoints.map((point) => (
+              <div className="proof-item" key={point.label}>
+                <span className="proof-icon">{point.icon}</span>
+                <div>
+                  <strong>{point.value}</strong>
+                  <span>{point.label}</span>
+                </div>
+              </div>
             ))}
           </motion.div>
 
@@ -186,7 +216,7 @@ const Home = () => {
           >
             <div className="profile-circle">
               <img 
-                src={profileImage}
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt="Amit Dixit Profile" 
                 className="profile-image"
               />

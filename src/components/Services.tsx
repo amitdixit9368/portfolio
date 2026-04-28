@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaMobile, FaDatabase, FaServer, FaPalette, FaRocket } from 'react-icons/fa';
+import { FaCode, FaPlug, FaRocket, FaServer, FaTools, FaWordpress } from 'react-icons/fa';
 import { SEOHead } from '../utils/SEO';
 import './Services.css';
 
@@ -9,45 +9,45 @@ const Services = () => {
     {
       id: 1,
       icon: <FaCode />,
-      title: 'Web Development',
-      description: 'Build responsive, scalable web applications using modern technologies like Html, Css, Javascript, Php, React, Node.js, databases, Wordpress.',
-      features: ['SPA Development', 'API Integration', 'Performance Optimization']
+      title: 'Frontend Development',
+      description: 'Responsive, accessible web interfaces built with HTML, CSS, JavaScript, React, and clean component structure.',
+      features: ['Responsive layouts', 'React components', 'Performance-minded UI'],
     },
     {
       id: 2,
-      icon: <FaMobile />,
-      title: 'Wordpress Development',
-      description: 'My WordPress development services include everything from design and development to content and customization per client needs',
-      features: ['Plugin Development', 'Theme Customization', 'Performance Optimization']
+      icon: <FaWordpress />,
+      title: 'WordPress Development',
+      description: 'Custom WordPress work for business websites, including theme customization, plugin work, and content-focused pages.',
+      features: ['Theme customization', 'Plugin development', 'Page speed fixes'],
     },
     {
       id: 3,
-      icon: <FaDatabase />,
-      title: 'Database Design',
-      description: 'Design and optimize databases for performance, scalability, and data integrity.',
-      features: ['Database Architecture', 'Query Optimization', 'Data Modeling']
+      icon: <FaPlug />,
+      title: 'PHP & API Integration',
+      description: 'Practical backend support for forms, dynamic content, REST APIs, third-party tools, and WordPress data flows.',
+      features: ['REST API integration', 'Custom forms', 'Dynamic content'],
     },
     {
       id: 4,
-      icon: <FaServer />,
-      title: 'Backend Development',
-      description: 'Build robust server-side solutions with Php,Node.js, Express, and cloud platforms.',
-      features: ['RESTful APIs', 'Authentication', 'Server Management']
+      icon: <FaRocket />,
+      title: 'Website Optimization',
+      description: 'Improve loading speed, mobile experience, and Core Web Vitals with focused frontend and WordPress fixes.',
+      features: ['Speed improvements', 'Mobile refinement', 'Code cleanup'],
     },
     {
       id: 5,
-      icon: <FaPalette />,
-      title: 'UI/UX Design',
-      description: 'Design beautiful, intuitive interfaces that provide excellent user experiences.',
-      features: ['Wireframing', 'Prototyping', 'User Testing']
+      icon: <FaTools />,
+      title: 'Maintenance & Fixes',
+      description: 'Reliable support for bug fixes, layout issues, plugin conflicts, content updates, and small feature requests.',
+      features: ['Bug fixing', 'Site updates', 'Plugin support'],
     },
     {
       id: 6,
-      icon: <FaRocket />,
-      title: 'Deployment & DevOps',
-      description: 'Deploy applications on cloud platforms with CI/CD pipelines and continuous monitoring.',
-      features: ['GitHub Actions', 'Docker', 'Cloud Deployment']
-    }
+      icon: <FaServer />,
+      title: 'Deployment Support',
+      description: 'Project setup, deployment, hosting handoff, GitHub workflow basics, and simple documentation for future updates.',
+      features: ['Build deployment', 'Hosting handoff', 'GitHub workflow'],
+    },
   ];
 
   const containerVariants = {
@@ -72,10 +72,10 @@ const Services = () => {
 
   return (
     <>
-      <SEOHead 
-        title="My Services - Amit Dixit | Web & App Development"
-        description="Full-stack development services including web development, mobile development, database design, backend solutions, UI/UX design, and cloud deployment."
-        keywords="web development, mobile development, backend services, database design, ui ux design, devops"
+      <SEOHead
+        title="Services - Amit Dixit | Web, WordPress & Frontend Development"
+        description="Web development services including responsive frontend development, WordPress customization, PHP, REST API integrations, optimization, and deployment support."
+        keywords="web development services, wordpress developer, react developer, php developer, api integration"
         ogImage="https://amitdixit9368.github.io/portfolio/og-services.jpg"
         url="https://amitdixit9368.github.io/portfolio/services"
       />
@@ -92,8 +92,8 @@ const Services = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h2>My Services</h2>
-            <p>Comprehensive solutions for your digital needs</p>
+            <h2>Services</h2>
+            <p>Focused development support for websites, WordPress projects, and frontend roles</p>
           </motion.div>
 
           <motion.div
@@ -115,7 +115,7 @@ const Services = () => {
                 <p>{service.description}</p>
                 <ul className="service-features">
                   {service.features.map((feature, idx) => (
-                    <li key={idx}>✓ {feature}</li>
+                    <li key={idx}>{feature}</li>
                   ))}
                 </ul>
               </motion.div>
