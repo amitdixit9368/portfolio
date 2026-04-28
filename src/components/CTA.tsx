@@ -26,10 +26,10 @@ const CTA = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2>Ready to Work Together?</h2>
+          <h2>Need a Web Developer?</h2>
           <p>
-            Let's bring your ideas to life with innovative solutions and cutting-edge technology.
-            I'm ready to help you achieve your goals.
+            I am open to web developer, frontend developer, and WordPress developer opportunities.
+            I can help with responsive UI, WordPress customization, PHP work, and API integrations.
           </p>
         </motion.div>
 
@@ -41,7 +41,7 @@ const CTA = () => {
           viewport={{ once: true }}
         >
           <Link to="/contact" className="cta-btn primary">
-            Start a Project
+            Hire Me
             <FaRocket />
           </Link>
           <Link to="/projects" className="cta-btn secondary">
@@ -59,16 +59,16 @@ const CTA = () => {
         viewport={{ once: true }}
       >
         <div className="stat">
-          <h4>50+</h4>
-          <p>Projects Completed</p>
+          <h4>10+</h4>
+          <p>Web Builds</p>
         </div>
         <div className="stat">
-          <h4>3+</h4>
+          <h4>1.5+</h4>
           <p>Years Experience</p>
         </div>
         <div className="stat">
-          <h4>100+</h4>
-          <p>Happy Clients</p>
+          <h4>24h</h4>
+          <p>Typical Response</p>
         </div>
       </motion.div>
     </motion.section>

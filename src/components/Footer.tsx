@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Portfolio</h3>
-          <p>Creating amazing digital experiences with modern technologies.</p>
+          <p>Building responsive websites, WordPress solutions, and practical frontend experiences.</p>
           <div className="social-links">
             <a href="https://github.com/amitdixit9368" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
@@ -54,11 +54,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
             <li>React Development</li>
-            <li>Full Stack Solutions</li>
             <li>WordPress Development</li>
+            <li>PHP & API Integration</li>
+            <li>Website Optimization</li>
+            <li>Maintenance & Fixes</li>
           </ul>
         </div>
         

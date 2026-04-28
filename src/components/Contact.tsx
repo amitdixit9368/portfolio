@@ -22,12 +22,12 @@ const Contact = () => {
       value: 'Hi Amit, I have a product idea and need your help with architecture, timeline and estimate.'
     },
     {
-      label: 'UX/UI revamp',
-      value: 'Hello, I am looking for a frontend specialist to improve the UI/UX of my web app.'
+      label: 'Website improvement',
+      value: 'Hello, I am looking for a web developer to improve my website UI, speed, and responsive experience.'
     },
     {
-      label: 'Career conversation',
-      value: 'Hi Amit, I want to discuss DevOps / React career growth and interview prep advice.'
+      label: 'Role opportunity',
+      value: 'Hi Amit, I would like to discuss a Web Developer or WordPress Developer opportunity with you.'
     }
   ];
 
@@ -121,7 +121,7 @@ const Contact = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
           >
             <h3>Looking for a trusted developer?</h3>
-            <p>Fast response within 24 hours. I’m open to full-time, contract, and freelance projects with modern stack solutions.</p>
+            <p>Fast response within 24 hours. I am open to full-time, contract, and freelance work for web, frontend, and WordPress development.</p>
 
             <div className="contact-details">
               {contactDetails.map((item, idx) => (
@@ -135,8 +135,12 @@ const Contact = () => {
               ))}
             </div>
 
-            <a className="resume-btn" href="/resume.pdf" target="_blank" rel="noreferrer">
-              <FaFileDownload /> Download Resume
+            <a
+              className="resume-btn"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              download="Amit-Dixit-Web-development.pdf"
+            >
+              <FaFileDownload /> Download CV
             </a>
           </motion.div>
 
