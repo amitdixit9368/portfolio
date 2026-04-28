@@ -6,18 +6,18 @@ const testimonials = [
   {
     name: 'Virendra Singh',
     role: 'Founder & CEO',
-    text: 'A remarkable developer. Delivered all features with excellent communication and quality.'
+    text: 'A remarkable developer. Delivered all features with excellent communication and quality.',
   },
   {
     name: 'Dileep Kumar Tekwani',
     role: 'CTO',
-    text: 'The architecture is scalable and maintainable. Clean component organization and great performance.'
+    text: 'The architecture is scalable and maintainable. Clean component organization and great performance.',
   },
   {
     name: 'Vishal Sharma',
     role: 'UI/UX Specialist',
-    text: 'UI interactions are smooth, responsive and modern. The portfolio stands out with subtle micro-animations.'
-  }
+    text: 'UI interactions are smooth, responsive and modern. The portfolio stands out with subtle micro-animations.',
+  },
 ];
 
 const Testimonials = () => {
@@ -31,7 +31,7 @@ const Testimonials = () => {
       id="testimonials"
     >
       <div className="testimonials-content">
-        <h2>Testimonials</h2>
+        <h2>Feedback</h2>
         <div className="testimonial-grid">
           {testimonials.map((item, index) => (
             <motion.div
@@ -39,7 +39,7 @@ const Testimonials = () => {
               className="testimonial-item"
               whileHover={{ y: -6 }}
             >
-              <p>“{item.text}”</p>
+              <p>"{item.text}"</p>
               <h4>{item.name}</h4>
               <span>{item.role}</span>
             </motion.div>

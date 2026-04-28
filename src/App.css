@@ -52,7 +52,7 @@ body {
 /* Typography Enhancements */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
   color: var(--text-dark);
 }
 
@@ -112,10 +112,11 @@ button {
   background: var(--secondary-color);
 }
 
-/* Sections */
+/* Sections — scroll-margin-top prevents fixed navbar from covering section headings */
 section {
   position: relative;
   z-index: 1;
+  scroll-margin-top: 90px;
 }
 
 /* Ensure Footer is always visible */
@@ -226,6 +227,11 @@ footer {
   
   .container {
     padding: 0 1.5rem;
+  }
+
+  /* Tighter scroll offset on mobile for smaller navbar */
+  section {
+    scroll-margin-top: 75px;
   }
 }
 

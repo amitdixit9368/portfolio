@@ -8,28 +8,20 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      date: '2025 - Present', 
-      role: 'Web Developer & Wordpress Developer',
-      company: 'Exiliensoft Consultiong Pvt. Ltd.',
-      description: 'Developed and maintained 10+ production applications, improved performance by 40%, mentored junior developers.',
-      highlights: ['React Development', 'Wordpress Development','Plugin Development', 'Performance Optimization', 'Mentoring']
+      date: 'June 2025 - Present',
+      role: 'Web Developer ',
+      company: 'Exiliensoft Consulting Pvt. Ltd.',
+      description: 'Building and maintaining responsive websites, WordPress features, custom plugin work, and React interfaces for production projects.',
+      highlights: ['React Development', 'WordPress Development', 'Plugin Development', 'PHP', 'Performance Optimization'],
     },
     {
       id: 2,
-      date: '2025 (April - July)',
-      role: 'Wordpress Developer',
+      date: 'March 2025 - June 2025',
+      role: 'WordPress Developer',
       company: 'Goa Tek Inc.',
-      description: 'Created responsive UI components, implemented state management solutions, Custom plugin development, worked with design teams.',
-      highlights: ['HTML', 'CSS', 'PHP', 'JavaScript', 'WordPress', 'UI/UX Collaboration']
+      description: 'Created responsive pages, customized WordPress features, supported plugin-level changes, and collaborated on UI improvements.',
+      highlights: ['HTML', 'CSS', 'PHP', 'JavaScript', 'WordPress', 'UI Collaboration'],
     },
-    {
-      id: 3,
-      date: '2022 - 2025',
-      role: 'College Intern',
-      company: 'RATM College',
-      description: 'Started Learning web development journey, worked on HTML/CSS/JavaScript projects, learned modern stack.',
-      highlights: ['HTML5', 'CSS3', 'JavaScript','PHP', 'C', 'C++', 'Git Basics', 'Project Collaboration', 'Problem Solving']
-    }
   ];
 
   const containerVariants: Variants = {
@@ -54,10 +46,10 @@ const Experience = () => {
 
   return (
     <>
-      <SEOHead 
-        title="My Experience - Amit Dixit | Developer Timeline"
-        description="View my professional experience journey from Junior Developer to Senior Full Stack Developer with 5+ years in web development."
-        keywords="experience, career, developer journey, professional background"
+      <SEOHead
+        title="Experience - Amit Dixit | Web Developer Timeline"
+        description="View Amit Dixit's professional experience in web development, WordPress development, React interfaces, PHP, and responsive website work."
+        keywords="experience, web developer, wordpress developer, react developer, php"
         ogImage="https://amitdixit9368.github.io/portfolio/og-experience.jpg"
         url="https://amitdixit9368.github.io/portfolio/experience"
       />
@@ -74,8 +66,8 @@ const Experience = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h2>My Experience</h2>
-            <p>5+ years of professional web development journey</p>
+            <h2>Experience</h2>
+            <p>1.5+ years of practical web, WordPress, and frontend development work</p>
           </motion.div>
 
           <motion.div

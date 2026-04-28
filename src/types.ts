@@ -8,6 +8,8 @@ export interface Project {
   github: string;
   demo: string;
   featured: boolean;
+  role?: string;
+  impact?: string;
 }
 
 export interface ThemeContextValue {

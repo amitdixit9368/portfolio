@@ -25,7 +25,7 @@
   margin-bottom: 1rem;
   color: #1a1a1a;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .dark-theme .projects h2 {
@@ -41,6 +41,19 @@
   background-clip: text;
   font-size: 0.5em;
   opacity: 0.3;
+}
+
+.projects-intro {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: #5f6472;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.dark-theme .projects-intro {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .filter-buttons {
@@ -108,7 +121,6 @@
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
   position: relative;
 }
 
@@ -152,7 +164,7 @@
   font-weight: 700;
   z-index: 10;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
@@ -165,6 +177,38 @@
 
 .project-card:hover .project-image img {
   transform: scale(1.15) rotate(2deg);
+}
+
+.project-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(102, 126, 234, 0.82)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 60px);
+  color: #fff;
+}
+
+.project-fallback span {
+  align-self: flex-start;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.project-fallback strong {
+  font-size: 1.55rem;
+  line-height: 1.18;
+  max-width: 90%;
 }
 
 .project-overlay {
@@ -215,6 +259,16 @@
   padding: 2rem;
 }
 
+.project-role {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  color: #667eea;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
 .project-info h3 {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
@@ -235,6 +289,14 @@
 
 .dark-theme .project-info p {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.project-impact {
+  padding: 0.8rem 0.95rem;
+  border-left: 3px solid #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .tech-stack {
@@ -282,7 +344,7 @@
   font-weight: 700;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   font-size: 0.85rem;
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
@@ -346,5 +408,9 @@
 
   .project-info h3 {
     font-size: 1.2rem;
+  }
+
+  .project-fallback strong {
+    font-size: 1.3rem;
   }
 }
